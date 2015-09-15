@@ -1,0 +1,7 @@
+class $model.getClassName()(BaseObject):
+    __tablename__ = '$model.getTableName()'
+
+    id = Column(Integer, nullable=False, primary_key=True)
+#foreach($attribute in $model.getAttributes())
+    $attribute.getName() = Column($attribute.getType())
+#end
